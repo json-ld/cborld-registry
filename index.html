@@ -35,7 +35,7 @@ async function buildCborLdRegistryTables(config) {
     const {id, domain, contact} = entry;
 
     tableRow.innerHTML =
-      `<td>${id}</td>` +
+      `<td><a href="tables/${id}.yml">${id}</a></td>` +
       `<td>${domain}</td>` +
       `<td>${contact}</td>`;
     tableBody.appendChild(tableRow);
