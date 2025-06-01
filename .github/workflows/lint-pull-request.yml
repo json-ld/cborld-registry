@@ -1,0 +1,22 @@
+name: Lint pull request
+on:
+  pull_request:
+    paths:
+      - 'tables/**.yml'
+jobs:
+  # Build the registry
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Setup Node.js v22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - name: Install registry tooling
+        run: npm i
+      - name: Generate registry index
+        run:
+          npm run build
+          test -e tables/index.json
