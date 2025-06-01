@@ -1,0 +1,18 @@
+---
+domain: Verifiable Credential Barcodes Examples
+owner: wes-smith
+mode: default
+provisional: true
+compressionTable:
+  - type: context
+    table:
+      32768: https://www.w3.org/ns/credentials/v2
+      32769: https://w3id.org/vc-barcodes/v1
+      32770: https://w3id.org/utopia/v2
+  - type: https://w3id.org/security#cryptosuiteString
+    table:
+      1: ecdsa-rdfc-2019
+      2: ecdsa-sd-2023
+      3: eddsa-rdfc-2022
+      4: ecdsa-xi-2023
+contact: W3C Verifiable Credentials Working Group
