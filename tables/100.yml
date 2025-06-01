@@ -1,6 +1,6 @@
 ---
 domain: Verifiable Credential Barcodes Examples
-owner: wes-smith
+contact: W3C Verifiable Credentials Working Group
 mode: default
 provisional: true
 compressionTable:
@@ -15,4 +15,3 @@ compressionTable:
       2: ecdsa-sd-2023
       3: eddsa-rdfc-2022
       4: ecdsa-xi-2023
-contact: W3C Verifiable Credentials Working Group

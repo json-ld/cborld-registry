@@ -5,7 +5,7 @@ on:
       - 'tables/**.yml'
 jobs:
   # Build the registry
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
