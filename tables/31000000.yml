@@ -1,0 +1,47 @@
+---
+domain: California DMV Physical Identification Documents
+contact:
+  - wes-smith
+  - msporny
+  - dlongley
+  - davidlehn
+mode: default
+provisional: true
+compressionTable:
+  - type: context
+    table:
+      1: https://www.w3.org/ns/credentials/v2
+      2: https://w3id.org/vc-barcodes/v1
+  - type: https://w3id.org/security#cryptosuiteString
+    table:
+      1: ecdsa-xi-2023
+  - type: url
+    table:
+      1: did:web:credentials.dmv.ca.gov
+      2: https://api.credentials.dmv.ca.gov/status/dlid/1/status-lists
+      3: https://api.credentials.dmv.ca.gov/status/dlid/2/status-lists
+      4: https://api.credentials.dmv.ca.gov/status/dlid/3/status-lists
+      5: did:web:credentials.dmv.ca.gov#vm-vcb-1
+      6: did:web:credentials.dmv.ca.gov#vm-vcb-2
+      7: did:web:credentials.dmv.ca.gov#vm-vcb-3
+      8: did:web:credentials.dmv.ca.gov#vm-vcb-4
+      9: did:web:credentials.dmv.ca.gov#vm-vcb-5
+      10: did:web:credentials.dmv.ca.gov#vm-vcb-6
+      11: did:web:credentials.dmv.ca.gov#vm-vcb-7
+      12: did:web:credentials.dmv.ca.gov#vm-vcb-8
+      13: did:web:credentials.dmv.ca.gov#vm-vcb-9
+      14: did:web:credentials.dmv.ca.gov#vm-vcb-10
+      15: did:web:credentials.dmv.ca.gov#vm-vcb-11
+      16: did:web:credentials.dmv.ca.gov#vm-vcb-12
+      17: did:web:credentials.dmv.ca.gov#vm-vcb-13
+      18: did:web:credentials.dmv.ca.gov#vm-vcb-14
+      19: did:web:credentials.dmv.ca.gov#vm-vcb-15
+      20: did:web:uat-credentials.dmv.ca.gov
+      21: https://api.uat-credentials.dmv.ca.gov/status/dlid/1/status-lists
+      22: did:web:uat-credentials.dmv.ca.gov#vm-vcb-1
+      23: did:web:uat-credentials.dmv.ca.gov#vm-vcb-2
+      24: did:web:uat-credentials.dmv.ca.gov#vm-vcb-3
+      25: did:web:uat-credentials.dmv.ca.gov#vm-vcb-4
+      26: did:web:uat-credentials.dmv.ca.gov#vm-vcb-5
+      27: https://api.uat-credentials.dmv.ca.gov/status/dlid/2/status-lists
+      28: https://api.uat-credentials.dmv.ca.gov/status/dlid/3/status-lists
