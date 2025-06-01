@@ -1,0 +1,16 @@
+{
+  "name": "cborld-registry-tooling",
+  "version": "0.0.1",
+  "description": "Tooling for CBOR-LD Registry",
+  "private": true,
+  "main": "build.js",
+  "dependencies": {
+    "ajv": "^8.6.3",
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "author": "Manu Sporny <msporny@digitalbazaar.com> (https://manu.sporny.org/)",
+  "license": "W3C"
+}
