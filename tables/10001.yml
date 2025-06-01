@@ -1,6 +1,10 @@
 ---
 domain: Provisional California DMV Test Credentials
-contact: wes-smith
+contact:
+  - wes-smith
+  - msporny
+  - dlongley
+  - davidlehn
 mode: default
 provisional: true
 compressionTable:
