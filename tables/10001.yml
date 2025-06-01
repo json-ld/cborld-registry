@@ -1,0 +1,20 @@
+---
+domain: Provisional California DMV Test Credentials
+contact: wes-smith
+mode: default
+provisional: true
+compressionTable:
+  - type: context
+    table:
+      1: https://www.w3.org/ns/credentials/v2
+      2: https://w3id.org/vc-barcodes/v1
+      3: https://w3id.org/vc-dpp/v1rc1
+      4: https://w3id.org/vdl/v1
+  - type: https://w3id.org/security#cryptosuiteString
+    table:
+      1: ecdsa-rdfc-2019
+  - type: url
+    table:
+      1: did:key:zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee
+      2: did:key:zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee#zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee
+      3: https://dmv.ca.gov/statuses/12345/status-lists
