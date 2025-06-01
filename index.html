@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+The CBOR-LD Registry
+  </title>
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'><!--
+    === NOTA BENE ===
+    For the three scripts below, if your spec resides on dev.w3 you can check them
+    out in the same tree and use relative links so that they'll work offline.
+   -->
+
+  <script class='remove' src='https://www.w3.org/Tools/respec/respec-w3c'></script>
+  <script class='remove'>
+/* Build CBOR-LD Registry table using JSON data */
+async function buildCborLdRegistryTables(config) {
+  const {document} = window;
+  const response = await fetch('tables/index.json');
+  if(response.status !== 200) {
+    throw new Error('Failed to retrieve CBOR-LD Registry index.json file.');
+  }
+  const allEntries = await response.json();
+
+  // set up the API summary table headers
+  const table = document.getElementById('registry-table');
+  const tableHeader = document.createElement('thead');
+  tableHeader.innerHTML = '<th>Registry Entry</th><th>Description</th>' +
+    '<th>Contact</th>';
+  table.appendChild(tableHeader);
+
+  // summarize each API endpoint
+  const tableBody = document.createElement('tbody');
+  for(const entry of allEntries) {
+    const tableRow = document.createElement('tr');
+    const {id, domain, contact} = entry;
+
+    tableRow.innerHTML =
+      `<td>${id}</td>` +
+      `<td>${domain}</td>` +
+      `<td>${contact}</td>`;
+    tableBody.appendChild(tableRow);
+  }
+  table.appendChild(tableBody);
+
+}
+window.buildCborLdRegistryTables = buildCborLdRegistryTables;
+     </script>
+     <script class="remove" type="text/javascript">
+var respecConfig = {
+  group: "cg/json-ld",
+
+  // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
+  specStatus: "CG-DRAFT",
+
+  // the specification's short name, as in http://www.w3.org/TR/short-name/
+  shortName: "cborld-registry",
+
+  edDraftURI: "https://json-ld.github.io/cborld-registry/",
+
+  // subtitle
+  subtitle: "Known compression table registrations for CBOR-LD",
+
+  // if you wish the publication date to be other than today, set this
+  // publishDate:  "2024-11-19",
+
+  // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+  // and its maturity status
+  // previousPublishDate:  "1977-03-15",
+  // previousMaturity:  "WD",
+
+  // extend the bibliography entries
+
+  github: {
+    repoURL: "https://github.com/json-ld/cborld-registry/",
+    branch: "main"
+  },
+  includePermalinks: false,
+
+  editors: [{
+    name: "The JSON-LD Community Group", url: "https://json-ld.org/",
+  }],
+
+  // authors, add as many as you like.
+  // This is optional, uncomment if you have authors as well as editors.
+  // only "name" is required. Same format as editors.
+  //authors: [{
+  //  name: "The JSON-LD Community Group", url: "https://json-ld.org/",
+  //}],
+  otherLinks: [{
+    key: "Related Documents",
+    data: [{
+      value: "CBOR-LD",
+      href: "https://json-ld.github.io/cbor-ld-spec/"
+    }]
+  }],
+  postProcess: [window.buildCborLdRegistryTables],
+  localBiblio: {}
+};
+  </script>
+  <style>
+.label-legend dd{
+    margin-top: 8px;
+  }
+.label-deprecated {
+  font-weight: bold;
+  background: #ef9a9a;
+  border-radius: 8px;
+  padding: 4px;
+}
+.label-no-contact-info {
+  font-weight: bold;
+  background: #ffe082;
+  border-radius: 8px;
+  padding: 4px;
+}
+pre .highlight {
+  font-weight: bold;
+  color: green;
+}
+pre .comment {
+  color: SteelBlue;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+  </style>
+</head>
+<body>
+  <section id='abstract'>
+    <p>
+This document serves as the registry of known CBOR-LD compression tables.
+    </p>
+  </section>
+
+  <section id='sotd'>
+
+    <p>
+Comments regarding this document are welcome. Please file issues
+directly on
+<a href="https://github.com/json-ld/cborld-registry/issues/">GitHub</a>,
+or send them
+to <a href="mailto:public-linked-json@w3.org">public-linked-json@w3.org</a> (
+<a href="mailto:public-linked-json-request@w3.org?subject=subscribe">subscribe</a>,
+<a href="https://lists.w3.org/Archives/Public/public-linked-json/">archives</a>).
+    </p>
+
+  </section>
+
+  <section class="informative">
+    <h1>Introduction</h1>
+
+    <p>
+This document serves as the registry of known CBOR-LD compression tables.
+    </p>
+
+    <section>
+      <h1>The Registration Process</h1>
+      <p>
+The registration process is described in the
+<a href="https://github.com/json-ld/cborld-registry?tab=readme-ov-file#registering-a-compression-table">README</a>.
+      </p>
+    </section>
+
+    <section id="conformance"></section>
+
+  </section>
+
+  <section>
+    <h1>CBOR-LD Compression Tables</h1>
+
+    <p>
+This table summarizes the known CBOR-LD compression tables. This registry does
+not act as an endorsement of any particular registry entry or its underlying
+technologies by the W3C, any of its Working Groups, or any affiliated members of
+the W3C. It exists as a mechanism for developers to discover various compression
+tables that they might wish to implement for the sake of interoperability.
+    </p>
+
+    <table id="registry-table" class="simple"></table>
+
+  </section>
+
+</body>
+</html>
