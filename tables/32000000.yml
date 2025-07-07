@@ -1,0 +1,25 @@
+---
+domain: Utopia Demo Verifiable Credentials
+contact:
+  - wes-smith
+  - msporny
+  - dlongley
+  - davidlehn
+mode: default
+provisional: true
+compressionTable:
+  - type: context
+    table:
+      1: https://www.w3.org/ns/credentials/v2
+      2: https://w3id.org/vc-barcodes/v1
+      3: https://w3id.org/vdl/v1
+      4: https://w3id.org/vdl/aamva/v1
+  - type: https://w3id.org/security#cryptosuiteString
+    table:
+      1: ecdsa-xi-2023
+      2: ecdsa-rdfc-2019
+  - type: url
+    table:
+      1: https://dmv.utopia.com/statuses/12345/status-lists
+      2: did:key:zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee
+      3: did:key:zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee#zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee
