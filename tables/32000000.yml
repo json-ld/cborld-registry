@@ -20,6 +20,6 @@ compressionTable:
       2: ecdsa-rdfc-2019
   - type: url
     table:
-      1: https://dmv.utopia.com/statuses/12345/status-lists
+      1: https://dmv.utopia.example/statuses/12345/status-lists
       2: did:key:zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee
       3: did:key:zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee#zDnaeW9VZZs7NH1ykvS5EMFmdodu2wj4dPcrV3DzTAadrXJee
