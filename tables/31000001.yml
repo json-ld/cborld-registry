@@ -1,0 +1,48 @@
+---
+domain: California DMV Disabled Person Parking Placards
+contact:
+  - wes-smith
+  - msporny
+  - dlongley
+  - davidlehn
+mode: default
+provisional: true
+compressionTable:
+  - type: context
+    table:
+      1: https://www.w3.org/ns/credentials/v2
+      2: https://w3id.org/vc-barcodes/v1
+      3: https://w3id.org/vc-dpp/v1rc1
+  - type: https://w3id.org/security#cryptosuiteString
+    table:
+      1: ecdsa-rdfc-2019
+  - type: url
+    table:
+      1: did:web:credentials.dmv.ca.gov
+      2: https://api.credentials.dmv.ca.gov/status/dpp-placard/1/status-lists
+      3: https://api.credentials.dmv.ca.gov/status/dpp-placard/2/status-lists
+      4: https://api.credentials.dmv.ca.gov/status/dpp-placard/3/status-lists
+      5: did:web:credentials.dmv.ca.gov#vm-dpp-placard-1
+      6: did:web:credentials.dmv.ca.gov#vm-dpp-placard-2
+      7: did:web:credentials.dmv.ca.gov#vm-dpp-placard-3
+      8: did:web:credentials.dmv.ca.gov#vm-dpp-placard-4
+      9: did:web:credentials.dmv.ca.gov#vm-dpp-placard-5
+      10: did:web:credentials.dmv.ca.gov#vm-dpp-placard-6
+      11: did:web:credentials.dmv.ca.gov#vm-dpp-placard-7
+      12: did:web:credentials.dmv.ca.gov#vm-dpp-placard-8
+      13: did:web:credentials.dmv.ca.gov#vm-dpp-placard-9
+      14: did:web:credentials.dmv.ca.gov#vm-dpp-placard-10
+      15: did:web:credentials.dmv.ca.gov#vm-dpp-placard-11
+      16: did:web:credentials.dmv.ca.gov#vm-dpp-placard-12
+      17: did:web:credentials.dmv.ca.gov#vm-dpp-placard-13
+      18: did:web:credentials.dmv.ca.gov#vm-dpp-placard-14
+      19: did:web:credentials.dmv.ca.gov#vm-dpp-placard-15
+      20: did:web:uat-credentials.dmv.ca.gov
+      21: https://api.uat-credentials.dmv.ca.gov/status/dpp-placard/1/status-lists
+      22: did:web:uat-credentials.dmv.ca.gov#vm-dpp-placard-1
+      23: did:web:uat-credentials.dmv.ca.gov#vm-dpp-placard-2
+      24: did:web:uat-credentials.dmv.ca.gov#vm-dpp-placard-3
+      25: did:web:uat-credentials.dmv.ca.gov#vm-dpp-placard-4
+      26: did:web:uat-credentials.dmv.ca.gov#vm-dpp-placard-5
+      27: https://api.uat-credentials.dmv.ca.gov/status/dpp-placard/2/status-lists
+      28: https://api.uat-credentials.dmv.ca.gov/status/dpp-placard/3/status-lists
